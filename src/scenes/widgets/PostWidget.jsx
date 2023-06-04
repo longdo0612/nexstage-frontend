@@ -36,14 +36,17 @@ const PostWidget = ({
   const primary = palette.primary.main;
 
   const patchLike = async () => {
-    const res = await fetch(`http://localhost:5000/posts/${postId}/like`, {
-      method: 'PATCH',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ userId: loggedInUserId }),
-    });
+    const res = await fetch(
+      `https://nexstage.vercel.app/posts/${postId}/like`,
+      {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId: loggedInUserId }),
+      }
+    );
 
     const updatedPost = await res.json();
 
@@ -67,7 +70,7 @@ const PostWidget = ({
           height='auto'
           alt='post'
           style={{ borderRadius: '0.75rem', marginTop: '0.75rem' }}
-          src={`http://localhost:5000/assets/${picturePath}`}
+          src={`https://nexstage.vercel.app/assets/${picturePath}`}
         />
       )}
       <Box

@@ -25,13 +25,16 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
       : false;
 
   const patchFriend = async () => {
-    const res = await fetch(`http://localhost:5000/users/${_id}/${friendId}`, {
-      method: 'PATCH',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-    });
+    const res = await fetch(
+      `https://nexstage.vercel.app/users/${_id}/${friendId}`,
+      {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     const data = await res.json();
 

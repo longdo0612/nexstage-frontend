@@ -50,7 +50,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append('picturePath', image.name);
     }
 
-    const res = await fetch('http://localhost:5000/posts', {
+    const res = await fetch('https://nexstage.vercel.app/posts', {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
