@@ -23,7 +23,7 @@ const FriendListWidget = ({ userId }) => {
     );
 
     const data = await res.json();
-    console.log(data);
+
     dispatch(setFriends({ friends: data }));
   };
 
