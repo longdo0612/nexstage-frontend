@@ -26,7 +26,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const res = await fetch(
-      `https://nexstage.vercel.app/users/${_id}/${friendId}`,
+      `https://next-stage.onrender.com/users/${_id}/${friendId}`,
       {
         method: 'PATCH',
         headers: {

@@ -13,7 +13,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const res = await fetch(
-      `https://nexstage.vercel.app/users/${userId}/friends`,
+      `https://next-stage.onrender.com/users/${userId}/friends`,
       {
         method: 'GET',
         headers: {

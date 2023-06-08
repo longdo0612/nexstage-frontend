@@ -4,7 +4,7 @@ const UserImage = ({ image, size = '60px' }) => {
   return (
     <Box width={size} height={size}>
       <img
-        src={`https://nexstage.vercel.app/assets/${image}`}
+        src={`https://next-stage.onrender.com/assets/${image}`}
         alt='user'
         style={{ objectFit: 'cover', borderRadius: '50%' }}
         width={size}

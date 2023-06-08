@@ -9,7 +9,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getPosts = async () => {
-    const res = await fetch('https://nexstage.vercel.app/posts', {
+    const res = await fetch('https://next-stage.onrender.com/posts', {
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -21,7 +21,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const res = await fetch(
-      `https://nexstage.vercel.app/posts/${userId}/posts`,
+      `https://next-stage.onrender.com/posts/${userId}/posts`,
       {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` },

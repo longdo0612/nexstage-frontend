@@ -37,7 +37,7 @@ const PostWidget = ({
 
   const patchLike = async () => {
     const res = await fetch(
-      `https://nexstage.vercel.app/posts/${postId}/like`,
+      `https://next-stage.onrender.com/posts/${postId}/like`,
       {
         method: 'PATCH',
         headers: {
@@ -70,7 +70,7 @@ const PostWidget = ({
           height='auto'
           alt='post'
           style={{ borderRadius: '0.75rem', marginTop: '0.75rem' }}
-          src={`https://nexstage.vercel.app/assets/${picturePath}`}
+          src={`https://next-stage.onrender.com/assets/${picturePath}`}
         />
       )}
       <Box

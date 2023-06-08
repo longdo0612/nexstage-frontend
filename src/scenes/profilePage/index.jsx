@@ -16,7 +16,7 @@ const ProfilePage = () => {
   const isNonMobileScreen = useMediaQuery('(min-width: 1000px)');
 
   const getUser = async () => {
-    const res = await fetch(`https://nexstage.vercel.app/users/${userId}`, {
+    const res = await fetch(`https://next-stage.onrender.com/users/${userId}`, {
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });
